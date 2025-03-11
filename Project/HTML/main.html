@@ -9,12 +9,34 @@
     <!-- 메인 틀 -->
     <div id="main-page">
         
+        <!-- 우측 날씨 섹션 -->
+        <aside id="weather-widget" style="float: right; width: 25%; margin-top: 20px;">
+            <h2>Current Weather</h2>
+            <div id="weather">
+            <p>Loading weather...</p>
+            </div>
+        </aside>
+
+        <script>
+            async function fetchWeather() {
+            const apiKey = 'YOUR_API_KEY';
+            const city = 'Suncheon';
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
+            const data = await response.json();
+            document.getElementById('weather').innerHTML = `
+                <p>City: ${data.name}</p>
+                <p>Temperature: ${data.main.temp}°C</p>
+                <p>Weather: ${data.weather[0].description}</p>
+            `;
+            }
+
+            fetchWeather();
+        </script>
 
     <!-- 헤더 -->
         <header id="main-header">
-        <h1>Web </h1>
+        <h1>Web Development</h1>
         <p>Your one-stop solution for web development</p>
-        <img src="path/to/your/image.jpg" alt="Description of image" style="float: right; width: 25%; margin-left: 10px;">
 
 
     <!-- 카테고리 네비게이션 -->

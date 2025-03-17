@@ -3,45 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>순천대학교 Hub</title>
 </head>
 <body>
     <!-- 메인 틀 -->
     <div id="main-page">
-        
-        <!-- 우측 날씨 섹션 -->
-        <aside id="weather-widget" style="float: right; width: 25%; margin-top: 20px;">
-            <h2>Current Weather</h2>
-            <div id="weather">
-            <p>Loading weather...</p>
-            </div>
-        </aside>
-
-        <script>
-            async function fetchWeather() {
-            const apiKey = 'YOUR_API_KEY';
-            const city = 'Suncheon';
-            const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
-            const data = await response.json();
-            document.getElementById('weather').innerHTML = `
-                <p>City: ${data.name}</p>
-                <p>Temperature: ${data.main.temp}°C</p>
-                <p>Weather: ${data.weather[0].description}</p>
-            `;
-            }
-
-            fetchWeather();
-        </script>
 
     <!-- 헤더 -->
         <header id="main-header">
-        <img src="logo.png" alt="Web Development Logo" style="width: 100px; height: auto;">
-        <p>Your one-stop solution for web development</p>
+    <div style="display:inline-block; vertical-align:top;">
+        <img src="media\1.png" alt="title_logo" class="logo"></div>
 
+    <div style="display:inline-block;">
+        <p>순천대학교 Hub</p></div>
+    
+    <p>순천대학교</p>
 
     <!-- 카테고리 네비게이션 -->
         <nav id="main-navigation">
-            <ul style="list-style: none; display: flex; gap: 10px; padding: 0;">
+            <ul style="list-style: none; display:flex; gap:10px; padding:0;">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Service</a></li>
@@ -87,6 +68,5 @@
     <!-- 페이지 하단 -->
         </header>
 </div>
-
 </body>
 </html>

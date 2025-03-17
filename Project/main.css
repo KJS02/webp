@@ -1,0 +1,36 @@
+
+.logo{
+
+  width: 55px; 
+  height: 60px;
+
+  }
+
+
+hr {
+
+    display: block;
+  
+    margin-top: 1em;
+  
+    margin-bottom: 1em;
+  
+    margin-left: auto;
+  
+    margin-right: auto;
+  
+    border-style: inset;
+  
+    border-width: 10px;
+
+  }
+
+  body {
+
+    font-family: '한컴산뜻돋음', sans-serif;
+    
+}
+
+
+
+      

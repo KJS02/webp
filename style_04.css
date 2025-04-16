@@ -28,26 +28,67 @@ hr {
     height: 100px;
     }
 
-.image2 {
-    width: 100px; 
-    height: 100px;
-    }
-
 .image4 {
         width: 40px; 
         height: 30px;
     }
 
     h2 {
-        color: green;
-        background-color: #def;
+        color: rgb(0, 113, 166);
         
     }
-    p {
-        color: #209134;
-        width: 300px;
+    h3 {
+        color: rgb(0, 0, 128);
+        background-color: rgb(221, 223, 255);
+        
+    }
+
     }
     span {
         background-color: #ff8;
         font-weight: bold;
     }
+
+    #id1 {
+        color: red;
+        background-color: rgb(255, 221, 221);
+        font-weight: bold;
+        font-size: 150%;
+    }
+    
+    .blue {
+        color: rgb(0, 255, 102);
+        background-color: rgb(8, 0, 255);
+    }
+
+    .large {
+        font-size: 120%;
+    }
+    
+    a {
+        text-decoration-line: none;
+    }
+
+    a[download] {
+        color: green;
+    }
+    
+    fieldset {
+        border: 3px solid lightseagreen;
+        padding: 10px;
+        margin: 10px 0;
+        }
+
+    legend {
+        font-size: 17px;
+        font-weight: bold;
+        color: rgb(178, 32, 32);
+    }
+
+    label {
+        font-size: 15px;
+        accent-color: rgb(255, 0, 0);
+    }
+
+    
+    

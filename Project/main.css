@@ -1,9 +1,24 @@
+a:link {color: rgb(0, 0, 0);}
+a:hover {color: rgb(128, 130, 240);}
+a:visited {color: rgb(0, 0, 0);}
+a:active {color: rgb(0, 0, 0);}
+a:focus {color: rgb(0, 71, 238);}
+label:checked {color: rgb(14, 165, 192);}
+accent-color:checked {color: rgb(14, 165, 192);}
+
+
+
+
+#main-header {
+  border: #9198ff solid 1px;
+}
 
 .logo{
 
   width: 55px; 
   height: 60px;
-
+  margin-left: 10px;
+  margin-top: 10px;
   }
 
 
@@ -25,12 +40,27 @@ hr {
 
   }
 
-  body {
+.image1 {
+    width: 120px; 
+    height: 130px;;
+    }
 
-    font-family: '한컴산뜻돋음', sans-serif;
-    
+
+#title {
+    font-size: 30px;
+    color: #000;
+    margin-top: 16px;
+    margin-left: 11px;
 }
 
+#subtitle {
+    font-size: 20px;
+    color: #000;
+    margin-top: 10px;
+    margin-left: 11px;
+}
 
-
-      
+#main-navigation {
+    margin-top: 20px;
+    margin-left: 10px;
+}

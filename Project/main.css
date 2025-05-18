@@ -6,45 +6,28 @@ a:focus {color: rgb(0, 71, 238);}
 label:checked {color: rgb(14, 165, 192);}
 accent-color:checked {color: rgb(14, 165, 192);}
 
-
-
-
-#main-header {
-  border: #9198ff solid 1px;
+#main-page {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.logo{
+hr {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 10px;
+  }
 
+
+.logo{
   width: 55px; 
   height: 60px;
   margin-left: 10px;
   margin-top: 10px;
   }
-
-
-hr {
-
-    display: block;
-  
-    margin-top: 1em;
-  
-    margin-bottom: 1em;
-  
-    margin-left: auto;
-  
-    margin-right: auto;
-  
-    border-style: inset;
-  
-    border-width: 10px;
-
-  }
-
-.image1 {
-    width: 120px; 
-    height: 130px;;
-    }
-
 
 #title {
     font-size: 30px;
@@ -64,3 +47,25 @@ hr {
     margin-top: 20px;
     margin-left: 10px;
 }
+
+main-content {
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#main-section {
+    background-color: #c2c2c2;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#main-aside {
+    background-color: #e6e6e6;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+

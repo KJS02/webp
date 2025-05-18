@@ -5,47 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="main.css">
     <title>순천대학교 Hub</title>
-    <script src="main.js"></script>
 </head>
 <body>
-    <!-- 메인 틀 -->
+    <!-- 전체 틀 -->
     <div id="main-page">
 
+
     <!-- 헤더 -->
-        <header id="main-header">
+    <header id="main-header">        
+     
+        <div style="display:inline-block; vertical-align:top;">
+            <img src="media\1.png" alt="title_logo" class="logo"></div>
 
-        <div id="weather-widget" style="float: right; width: 25%; text-align: right;">
-            <h4>현재 날씨</h4>
-            <div id="weather-info">
-                <p>데이터를 불러오는 중입니다...</p>
-            </div>
-        </div>
-        
-        <script>
-            async function fetchWeather() {
-                try {
-                    const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Suncheon&appid=YOUR_API_KEY&lang=kr&units=metric');
-                    if (!response.ok) throw new Error('Weather data not available');
-                    const data = await response.json();
-                    const weatherInfo = `
-                        <p>온도: ${data.main.temp}°C</p>
-                        <p>상태: ${data.weather[0].description}</p>
-                        <p>습도: ${data.main.humidity}%</p>
-                    `;
-                    document.getElementById('weather-info').innerHTML = weatherInfo;
-                } catch (error) {
-                    document.getElementById('weather-info').innerHTML = '<p>날씨 정보를 불러올 수 없습니다.</p>';
-                }
-            }
-            fetchWeather();
-        </script>
-            
-    <div style="display:inline-block; vertical-align:top;">
-        <img src="media\1.png" alt="title_logo" class="logo"></div>
-
-    <div style="display:inline-block;">
-        <h1 id="title">순천대학교</h1></div>
-    
+        <div style="display:inline-block;">
+            <h1 id="title">순천대학교</h1></div>
 
     <!-- 카테고리 네비게이션 -->
         <nav id="main-navigation">
@@ -55,20 +28,42 @@
             <li><a href="#">웹 메일</a></li>
             <li><a href="#">바로가기</a></li>
             </ul>
-        </nav>
-        <hr>
+        </nav><hr>
+     </header>
 
 
-    <!-- 메인 섹션 -->
+
+    <!-- 메인 화면 -->
         <div id="main-content">
 
             <!-- 좌측 섹션 -->
-            <section id="main-section"></section>
+            <section id="main-section">
+                <div>   
+                    <h2>공지사항</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#">공지사항 1</a></li>
+                        <li><a href="#">공지사항 2</a></li>
+                        <li><a href="#">공지사항 3</a></li>
+                        <li><a href="#">공지사항 4</a></li>
+                        <li><a href="#">공지사항 5</a></li>
+                    </ul>
+                </div>
+
+                <div>   
+                    <h2>공지사항</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#">공지사항 1</a></li>
+                        <li><a href="#">공지사항 2</a></li>
+                        <li><a href="#">공지사항 3</a></li>
+                        <li><a href="#">공지사항 4</a></li>
+                        <li><a href="#">공지사항 5</a></li>
+                    </ul>
+                </div>
+            </section>
             
             <!-- 우측 섹션 -->
-            <aside id="main-aside"></aside>
             <aside id="main-aside" style="float: right; width: 25%;">
-                <h2>Latest News</h2>
+                <h2>1</h2>
                 <ul style="list-style: none; padding: 0;">
                     <li><a href="#">News Item 1</a></li>
                     <li><a href="#">News Item 2</a></li>
@@ -78,7 +73,9 @@
                     <li><a href="#">News Item 3</a></li>
                     <li><a href="#">News Item 3</a></li>
                 </ul>
-                <h2>Latest News</h2>
+
+
+                <h2>2</h2>
                 <ul style="list-style: none; padding: 0;">
                     <li><a href="#">News Item 1</a></li>
                     <li><a href="#">News Item 2</a></li>
@@ -90,10 +87,34 @@
                 </ul>
             </aside>
         </div>
+
+                <div>   
+                    <h2>공지사항</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#">공지사항 1</a></li>
+                        <li><a href="#">공지사항 2</a></li>
+                        <li><a href="#">공지사항 3</a></li>
+                        <li><a href="#">공지사항 4</a></li>
+                        <li><a href="#">공지사항 5</a></li>
+                    </ul>
+                </div>
+
+                <div>   
+                    <h2>공지사항</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#">공지사항 1</a></li>
+                        <li><a href="#">공지사항 2</a></li>
+                        <li><a href="#">공지사항 3</a></li>
+                        <li><a href="#">공지사항 4</a></li>
+                        <li><a href="#">공지사항 5</a></li>
+                    </ul>
+                </div>
+            </section>
     
 
     <!-- 페이지 하단 -->
-        </header>
-</div>
+     Copyright ⓒ Sunchon National University. All rights reserved.
+       
+    </div>
 </body>
 </html>

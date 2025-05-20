@@ -11,16 +11,12 @@ accent-color:checked {color: rgb(14, 165, 192);}
   margin: 0 auto;
 }
 
-hr {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: inset;
-    border-width: 10px;
-  }
-
+#main-left {
+    background-colorgb(15, 6, 6)2c2;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
 
 .logo{
   width: 55px; 
@@ -48,17 +44,59 @@ hr {
     margin-left: 10px;
 }
 
-main-content {
-    border-radius: 10px;
-    margin-top: 20px;
-    margin-left: 20px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#main-container {
+    width: 70%;
+    height: 70%;
+    border-radius: 20px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
 }
 
-#main-section {
-    background-color: #c2c2c2;
+.box {
     border-radius: 20px;
-    margin-top: 20px;
-    margin-left: 20px;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+}
+
+
+.image-container img {
+    border-radius: 20px;
+    width: 70%;
+    height: 70%;
+}
+
+
+.image-container p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 #main-aside {

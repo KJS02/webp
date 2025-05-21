@@ -20,6 +20,12 @@
         <div style="display:inline-block;">
             <h1 id="title">순천대학교 HUB</h1></div>
 
+        <div class="search" style="float:right;">
+            <form action="https://www.scnu.ac.kr/search/" method="get">
+                <input type="text" name="query" placeholder="검색어를 입력하세요">
+                <button type="submit">검색</button>
+            </form>
+        </div>
 
     <!-- 카테고리 네비게이션 -->
         <nav id="main-navigation">
@@ -34,69 +40,38 @@
 
 
     <!-- 메인 화면 -->
-        <div id="main-content">
-
-            <!-- 좌측 섹션 -->
-            <div class="main-container">   
-                <img id="bgimg" src="media\1.png" alt="시간대 이미지">
-                <script src="bgimg.js"></script> <!-- 외부 스크립트 -->
-                <p id="timeText">오전입니다</p>
-            </div>
-           
-        
-            <!-- 우측 섹션 -->
-            <aside id="main-aside" style="float: right; width: 25%;">
-                <h2>1</h2>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="#">News Item 1</a></li>
-                    <li><a href="#">News Item 2</a></li>
-                    <li><a href="#">News Item 3</a></li>
-                    <li><a href="#">News Item 3</a></li>
-                    <li><a href="#">News Item 3</a></li>
-                    <li><a href="#">News Item 3</a></li>
-                    <li><a href="#">News Item 3</a></li>
-                </ul>
+<div id="main-content" style="display: flex; justify-content: space-between;">
 
 
-                <h2>2</h2>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="#">News Item 1</a></li>
-                    <li><a href="#">News Item 2</a></li>
-                    <li><a href="#">News Item 3</a></li>
-                    <li><a href="#">News Item 3</a></li>
-                    <li><a href="#">News Item 3</a></li>
-                    <li><a href="#">News Item 3</a></li>
-                    <li><a href="#">News Item 3</a></li>
-                </ul>
-            </aside>
+    <!-- 좌측 섹션 -->
+    <div class="bg-container" style="flex: 2;">
+        <img id="bgimg" src="media/1.png" alt="시간대 이미지">
+        <script src="time.js"></script> <!-- 외부 스크립트 -->
+        <p id="bgtext">즐거운 오전입니다.</p>
+    </div>
 
-                <div>   
-                    <h2>공지사항</h2>
-                    <ul style="list-style: none; padding: 0;">
-                        <li><a href="#">공지사항 1</a></li>
-                        <li><a href="#">공지사항 2</a></li>
-                        <li><a href="#">공지사항 3</a></li>
-                        <li><a href="#">공지사항 4</a></li>
-                        <li><a href="#">공지사항 5</a></li>
-                    </ul>
-                </div>
 
-                <div>   
-                    <h2>공지사항</h2>
-                    <ul style="list-style: none; padding: 0;">
-                        <li><a href="#">공지사항 1</a></li>
-                        <li><a href="#">공지사항 2</a></li>
-                        <li><a href="#">공지사항 3</a></li>
-                        <li><a href="#">공지사항 4</a></li>
-                        <li><a href="#">공지사항 5</a></li>
-                    </ul>
-                </div>
-            </section>
-    
+    <!-- 우측 섹션 -->
+    <aside id="main-aside" style="flex: 1;">
+        <h2>1</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li><a href="#">News Item 1</a></li>
+            <li><a href="#">News Item 2</a></li>
+            <li><a href="#">News Item 3</a></li>
+        </ul>
+
+        <h2>2</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li><a href="#">News Item 1</a></li>
+            <li><a href="#">News Item 2</a></li>
+            <li><a href="#">News Item 3</a></li>
+        </ul>
+    </aside>
+
+</div>
 
     <!-- 페이지 하단 -->
      Copyright ⓒ Sunchon National University. All rights reserved.
        
-    </div>
 </body>
 </html>

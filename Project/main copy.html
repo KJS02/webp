@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>순천대학교 Hub</title>
+</head>
+<body>
+    <!-- 전체 틀 -->
+    <div id="main-page">
+
+
+    <!-- 헤더 -->
+    <header id="main-header">        
+     
+        <div style="display:inline-block; vertical-align:top;">
+            <img src="media\1.png" alt="title_logo" class="logo"></div>
+
+        <div style="display:inline-block;">
+            <h1 id="title">순천대학교 HUB</h1></div>
+
+        <div class="search" style="float:right;">
+            <form action="https://www.scnu.ac.kr/search/" method="get">
+                <input id="button" type="text" name="query" placeholder="검색어를 입력하세요">
+                <button type="submit">검색</button>
+            </form>
+        </div>
+
+    <!-- 카테고리 네비게이션 -->
+        <nav id="main-navigation">
+            <ul style="list-style: none; display:flex; gap:10px; padding:0;">
+            <li><a href="#">홈</a></li>
+            <li><a href="#">캘린더</a></li>
+            <li><a href="#">웹 메일</a></li>
+            <li><a href="#">바로가기</a></li>
+            </ul>
+        </nav><hr>
+     </header>
+
+
+    <!-- 메인 화면 -->
+<div id="main-content" style="display: flex; justify-content: space-between;">
+
+    <!-- 좌측 섹션 -->
+    <div class="main-container" style="flex: 2;">
+        <img id="bgimg" src="media/1.png" alt="시간대 이미지">
+        <script src="time.js"></script> <!-- 외부 스크립트 -->
+        <p id="bgtext">오전입니다</p>
+    </div>
+
+    <!-- 우측 섹션 -->
+    <aside id="main-aside" style="flex: 1;">
+        <h2>1</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li><a href="#">News Item 1</a></li>
+            <li><a href="#">News Item 2</a></li>
+            <li><a href="#">News Item 3</a></li>
+        </ul>
+
+        <h2>2</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li><a href="#">News Item 1</a></li>
+            <li><a href="#">News Item 2</a></li>
+            <li><a href="#">News Item 3</a></li>
+        </ul>
+    </aside>
+
+</div>
+    
+
+    <!-- 페이지 하단 -->
+     Copyright ⓒ Sunchon National University. All rights reserved.
+       
+    </div>
+</body>
+</html>

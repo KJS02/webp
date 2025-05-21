@@ -6,18 +6,58 @@ a:focus {color: rgb(0, 71, 238);}
 label:checked {color: rgb(14, 165, 192);}
 accent-color:checked {color: rgb(14, 165, 192);}
 
+/* 전체 페이지 스타일 */
+
 #main-page {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-#main-left {
-    background-colorgb(15, 6, 6)2c2;
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-left: 20px;
+/* 기본 카드 스타일 */
+.main-container, #main-aside {
+    background: #FFFFFF; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 16px;
 }
 
+/* 버튼 스타일 */
+button {
+    background-color: #2D6AAD;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #3700B3;
+}
+
+/* 메인 컨테이너와 사이드바 정렬 */
+#main-content {
+    display: flex;
+    gap: 20px;
+}
+
+/* 사이드바 스타일 */
+
+.search {
+  margin-top: 25px;
+  margin-right: 20px;    
+}
+
+/* 검색창 스타일 */
+input[type="text"] {
+    height: 30px;
+    width: 400px;
+    border-radius: 20px;
+    border: 3px solid #2D6AAD;
+}
+
+/* 로고 설정 */
 .logo{
   width: 55px; 
   height: 60px;
@@ -52,20 +92,23 @@ accent-color:checked {color: rgb(14, 165, 192);}
 
 
 
-
-
-
-
-
-
-#main-container {
-    width: 70%;
-    height: 70%;
+#main-content {
+    background-color: #f0f0f0;
     border-radius: 20px;
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+
+#bg-container {
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
 }
 
 .box {
@@ -80,14 +123,15 @@ accent-color:checked {color: rgb(14, 165, 192);}
 }
 
 
-.image-container img {
+#bgimg {
+    margin-top: 20px;
+    width: 100%; 
+    height: auto;
     border-radius: 20px;
-    width: 70%;
-    height: 70%;
 }
 
 
-.image-container p {
+#bgtext {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -103,6 +147,7 @@ accent-color:checked {color: rgb(14, 165, 192);}
     background-color: #e6e6e6;
     border-radius: 20px;
     margin-top: 20px;
+    margin-left: 20px;
     margin-right: 20px;
 }
 

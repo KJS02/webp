@@ -14,7 +14,7 @@ function updateImage() {
         textElement.innerText = "즐거운 오후입니다."; // 오후 문구
 
     } else {
-        imageElement.src = "./media/bg2.jpg"; // 저녁 이미지
+        imageElement.src = "./media/bg5.jpg"; // 저녁 이미지
         textElement.innerText = "즐거운 저녁입니다"; // 저녁 문구
     }
 }

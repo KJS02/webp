@@ -1,28 +1,33 @@
-<!-- 메인 화면 -->
-<div id="main-content" style="display: flex; justify-content: space-between;">
-
-    <!-- 좌측 섹션 -->
-    <div class="main-container" style="flex: 2;">
-        <img id="bgimg" src="media/1.png" alt="시간대 이미지">
-        <script src="time.js"></script> <!-- 외부 스크립트 -->
-        <p id="bgtext">오전입니다</p>
+<!-- 학사일정 섹션 -->
+<aside id="main-aside" style="flex: 2;">
+    <h2>학사일정</h2><br>
+    <div id="news-container" style="display: flex; flex-direction: column; gap: 20px;">
+        <!-- 뉴스 아이템이 여기에 동적으로 추가됨 -->
     </div>
+</aside>
 
-    <!-- 우측 섹션 -->
-    <aside id="main-aside" style="flex: 1;">
-        <h2>1</h2>
-        <ul style="list-style: none; padding: 0;">
-            <li><a href="#">News Item 1</a></li>
-            <li><a href="#">News Item 2</a></li>
-            <li><a href="#">News Item 3</a></li>
-        </ul>
+<script>
+    // 크롤링한 데이터 예제 (JSON 형식)
+    const crawledData = [
+        { title: "News Item 1", link: "Cons.ocu.ac.kr" },
+        { title: "News Item 2", link: "Cons.ocu.ac.kr" },
+        { title: "News Item 3", link: "https://example.com/news3" }
+    ];
 
-        <h2>2</h2>
-        <ul style="list-style: none; padding: 0;">
-            <li><a href="#">News Item 1</a></li>
-            <li><a href="#">News Item 2</a></li>
-            <li><a href="#">News Item 3</a></li>
-        </ul>
-    </aside>
+    // 뉴스 아이템을 동적으로 추가하는 함수
+    function populateNews() {ㄴ
+        const newsContainer = document.getElementById("news-container");
 
-</div>
+        crawledData.forEach(news => {
+            const newsDiv = document.createElement("div");
+            const newsLink = document.createElement("a");
+            newsLink.href = news.link;
+            newsLink.textContent = news.title;
+            newsDiv.appendChild(newsLink);
+            newsContainer.appendChild(newsDiv);
+        });
+    }
+
+    // 페이지 로드 시 실행
+    window.onload = populateNews;
+</script>

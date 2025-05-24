@@ -6,7 +6,7 @@ function updateImage() {
 
 
     if (hour >= 6 && hour < 12) {
-        imageElement.src = "./media/bg2.jpg"; // 오전 이미지
+        imageElement.src = "./media/bg5.jpg"; // 오전 이미지
         textElement.innerText = "즐거운 오전입니다"; // 오전 문구
 
     } else if (hour >= 12 && hour < 18) {

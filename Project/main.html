@@ -43,8 +43,21 @@
     <!-- 좌측 섹션 -->
     <div class="bg-container" style="flex: 5;">
         <img id="bgimg" src="" alt="시간대 이미지">
-        <script src="time.js"></script> <!-- 외부 스크립트 -->
+        <script src="./JS/time.js"></script> <!-- 외부 스크립트 -->
         <p id="bgtext">불러오는 중...</p>
+
+        <!-- 중앙 날씨 -->
+        <img id="weather-icon" src="" alt="아이콘">
+        <p id="weather">불러오는 중...</p>
+
+        <!-- 미세먼지 -->
+        <p id="dust">불러오는 중...</p>
+
+        <!--  -->
+        <p id="fog">불러오는 중...</p>
+
+
+
     </div>
 
     <!-- 우측 섹션 -->
@@ -52,20 +65,19 @@
         <h2>학사일정</h2><br>
         <div style="display: flex; flex-direction: column; gap: 20px;">
             <div id="main-a">
-                <a href="#">학사일정 1</a>
+                <a href="#">1</a>
             </div>
             <div id="main-b">
-                <a href="#">학사일정 2</a>
+                <a href="#">2</a>
             </div>
-            <div id="main-c">
-                <a href="#">학사일정 3</a>
+            <div id="main-a">
+                <a href="#">3</a>
             </div>
-            <div id="main-d">
-                <a href="#">학사일정 3</a>
+            <div id="main-b">
+                <a href="#">4</a>
             </div>
         </div>
     </aside>
-    <script src="day.js"></script> <!-- JavaScript 파일 로드 -->
 </div>
 
     <!-- 하단 공지 컨테이너 -->
@@ -73,45 +85,48 @@
         <div id="sc-container1" style="flex: 1;">
             <h3>ㆍ 학사 공지</h3>
                 <div style="display: flex; flex-direction: column; gap: 20px;">
-                <div style="background: #f5f5f5; padding: 15px;">
-                    <a href="#">News Item 1</a>
+                <div id="box" style="background: #f5f5f5; padding: 15px;">
+                    <a href="#">1</a>
                 </div>
-                <div style="background: #f5f5f5; padding: 15px;">
-                    <a href="#">News Item 2</a>
+                <div id="box" style="background: #f5f5f5; padding: 15px;">
+                    <a href="#">2</a>
                 </div>
-                <div style="background: #f5f5f5; padding: 15px;">
-                    <a href="#">News Item 3</a>
+                <div id="box" style="background: #f5f5f5; padding: 15px;">
+                    <a href="#">3</a>
                 </div>
             </div>
         </div>
         
     </ul>
 
-        <div id="sc-container2" style="flex: 1;">
+        <div id="sc-container1" style="flex: 1;">
             <h3>ㆍ 학과 공지</h3>
             <div style="display: flex; flex-direction: column; gap: 20px;">
-            {% for notice in notices %}
-            <div style="background: #f5f5f5; padding: 15px;">
-                <a href="{{ notice.link }}" target="_blank">{{ notice.title }}</a>
-                <span style="float: right;">{{ notice.date }}</span>
+                <div id="box" style="background: #f5f5f5; padding: 15px;">
+                    <a href="#">1</a>
+                </div>
+                <div id="box" style="background: #f5f5f5; padding: 15px;">
+                    <a href="#">2</a>
+                </div>
+                <div id="box" style="background: #f5f5f5; padding: 15px;">
+                    <a href="#">3</a>
+                </div>
             </div>
-            {% endfor %}
         </div>
-    </div>
 
 
 
-        <div id="sc-container3" style="flex: 1;">
+        <div id="sc-container1" style="flex: 1;">
             <h3>ㆍ OCU 공지</h3>
                 <div style="display: flex; flex-direction: column; gap: 20px;">
-                <div style="background: #f5f5f5; padding: 15px;">
-                    <a href="#">News Item 1</a>
+                <div id="box" style="background: #f5f5f5; padding: 15px;">
+                    <a href="#">1</a>
                 </div>
-                <div style="background: #f5f5f5; padding: 15px;">
-                    <a href="#">News Item 2</a>
+                <div id="box" style="background: #f5f5f5; padding: 15px;">
+                    <a href="#">2</a>
                 </div>
-                <div style="background: #f5f5f5; padding: 15px;">
-                    <a href="#">News Item 3</a>
+                <div id="box" style="background: #f5f5f5; padding: 15px;">
+                    <a href="#">3</a>
                 </div>
             </div>
         </div>

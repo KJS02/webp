@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_04.css">
+    <style>
+        a:link {color: lightseagreen;}
+        a:visited {color: lightgreen;}
+        a:hover {color: lightcoral;}
+        a:active {color: plum;}
+        a:focus {color: rgb(0, 238, 115);}
+        label:checked {color: rgb(14, 165, 192);}
+        accent-color:checked {color: rgb(14, 165, 192);}
+        
+        div{
+            background-image: url('media/3.png');
+            height: 40px}
+        
+        </style>
+</head>
+<body>
+      <p>
+        <label>
+            옵션 선택:
+          <select>
+            <optgroup label="그룹 1">
+              <option>1</option>
+            </optgroup>
+            <optgroup label="그룹 2">
+              <option>2-1</option>
+              <option disabled>2-2</option>
+              <option>2-3</option>
+            </optgroup>
+            <optgroup label="disabled">
+              <option disabled>3-1</option>
+              <option>3-2</option>
+              <option>3-3</option>
+            </optgroup>
+          </select>
+        </label>
+      </p>
+      
+      <fieldset>
+        <legend>단일 선택</legend>
+        <p>
+          <label>
+            이름: <input type="radio" name="radio" value="1" /> 1
+            <input type="radio" name="radio" value="2" /> 2
+            <input type="radio" name="radio" value="3" checked/> 3
+          </label>
+        </p>
+        <p>
+          <label>숫자: <input type="number" /></label>
+        </p>
+      </fieldset>
+      
+      <fieldset >
+        <legend>복수 선택 (disabled)</legend>
+        <p>
+          <label>
+            이름: <input type="checkbox" name="radio" value="1" disabled> 1
+            <input type="checkbox" name="radio" value="2" disabled> 2
+            <input type="checkbox" name="radio" value="3" checked> 3
+          </label>
+        </p>
+      </fieldset>
+      <html>
+	<body>
+		<a href="http://www.naver.com">네이버 바로가기</a><br>
+		<a href="http://google.co.kr" target="_blank">구글 바로가기 (new window)</a><br>
+        <a href="http://www.naver.com">네이버 바로가기</a><br>
+		<a href="http://google.co.kr" target="_blank">구글 바로가기 (new window)</a><br>
+        <a href="http://www.naver.com">네이버 바로가기</a><br>
+		<a href="http://google.co.kr" target="_blank">구글 바로가기 (new window)</a>
+	</body>
+    <br>
+    <div style="background-repeat: no-repeat"></h3>repeat: no-repeat</h3></div>
+    <div style="background-repeat: repeat-X"></h3>repeat: repeat-X</h3></div>
+    <div style="background-repeat: space"></h3>repeat: space</h3></div>
+    <div style="background-repeat: round"></h3>repeat: round</h3></div>
+    <div style="background-repeat: 50%"></h3>repeat: 50%</h3></div>
+    <div style="background-repeat: contain"></h3>repeat: contain</h3></div>
+</html>
+</body>
+</html>

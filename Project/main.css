@@ -104,7 +104,13 @@ input[type="text"] {
 }
 
 
+.bg-container {
+    position: relative;
+}
+
+
 #bgimg {
+    display: block;
     width: 100%;    
     height: 100%;
     border-radius: 20px;
@@ -114,15 +120,79 @@ input[type="text"] {
 
 #bgtext {
     position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
-    font-size: 24px;
+    font-size: 15px;
     font-weight: bold;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
     padding: 10px;
-    border-radius: 8px;
-
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+#weather {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#weather-icon{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+
+#dust {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    text-align: left;
+    padding: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#fog {
+    position: absolute;
+    top: 5px;
+    right: -30px;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    text-align: right;
+    padding: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #main-aside {
     border-radius: 20px;
@@ -138,16 +208,23 @@ input[type="text"] {
 
 /* 세컨드 컨테이너 스타일 */
 
-#sc-container{
+#sc-container {
     background-color: #f0f0f0;
     border-radius: 35px;
     margin-top: 20px;
     padding: 20px;
 }
 
-#sc-container1, #sc-container2, #sc-container3 {
+#sc-container1 {
     background-color: #ffffff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+#sc-box{
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(188, 122, 122, 0.2);
     border-radius: 20px;
     padding: 30px;
 }
@@ -157,7 +234,7 @@ input[type="text"] {
 
 /* 학사 일정 스타일 */
 
-#main-a, #main-c {
+#main-a {
     height: 45px;
     background-color: #f5f5f5;
     border-top-right-radius: 20px;
@@ -167,7 +244,7 @@ input[type="text"] {
     padding: 15px;
 }
 
-#main-b, #main-d {
+#main-b {
     height: 45px;
     background-color: #f5f5f5;
     border-top-left-radius: 20px;
@@ -175,4 +252,8 @@ input[type="text"] {
     margin-right: -30px;
     margin-left: 100px;
     padding: 15px;
+}
+
+#box{
+    border-radius: 15px;
 }

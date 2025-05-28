@@ -2,8 +2,12 @@ from flask import Flask, render_template
 import requests
 from bs4 import BeautifulSoup
 
+import os
 
 app = Flask(__name__)
+
+print("📁 현재 작업 디렉토리:", os.getcwd())
+print("📁 Flask static 경로:", os.path.abspath(app.static_folder))
 
 @app.route("/")
 def home():

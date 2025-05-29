@@ -1,0 +1,21 @@
+
+img:hover {
+    border: 5px solid rgb(255, 0, 0);
+    opacity: 1;
+}
+
+div {
+    display: inline-block;
+    width: 500px;
+    height: 400px;
+    padding: 10px;
+    background-color: #ffe;
+    border: 4px solid #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image1 {
+        width: 100px; 
+        height: 110px;
+        border: 5px solid #e18686;
+        }

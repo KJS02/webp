@@ -1,20 +1,30 @@
 import requests
 from bs4 import BeautifulSoup
+import json
 
-# 1. URL 지정
-url = "https://news.naver.com"
-
-# 2. HTML 요청
+url = "https://www.scnu.ac.kr/sce/main.do"
 headers = {"User-Agent": "Mozilla/5.0"}
+
 response = requests.get(url, headers=headers)
-html = response.text
+response.encoding = 'utf-8'  # 인코딩 설정
 
-# 3. BeautifulSoup으로 파싱
-soup = BeautifulSoup(html, 'html.parser')
+soup = BeautifulSoup(response.text, "html.parser")
 
-# 4. 원하는 데이터 찾기 (예: 메인 뉴스 타이틀)
-titles = soup.select('.main_component .main_news_area a')
+# 학사일정 li 태그 안 항목들
+items = soup.select(".pop_schedule ul li")
 
-# 5. 출력
-for title in titles:
-    print(title.text.strip(), "-", title['href'])
+data = []
+for li in items:
+    date = li.select_one(".date")
+    text = li.select_one(".txt")
+    if date and text:
+        data.append({
+            "date": date.get_text(strip=True),
+            "event": text.get_text(strip=True)
+        })
+
+# 결과 출력 or 저장
+with open("schedule.json", "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+
+print("학사일정 스크래핑 완료!")

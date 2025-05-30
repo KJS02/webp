@@ -1,8 +1,6 @@
 a:link {color: rgb(0, 0, 0);}
-a:hover {color: rgb(128, 130, 240);}
 a:visited {color: rgb(0, 0, 0);}
 a:active {color: rgb(0, 0, 0);}
-a:focus {color: rgb(0, 71, 238);}
 label:checked {color: rgb(14, 165, 192);}
 accent-color:checked {color: rgb(14, 165, 192);}
 
@@ -94,7 +92,6 @@ input[type="text"] {
 
 #main-navigation {
     margin-top: 20px;
-    margin-left: 10px;
 }
 
 
@@ -194,6 +191,7 @@ input[type="text"] {
 }
 
 #sc-container1 {
+    transition: transform 0.3s ease; /* 부드럽게 */
     background-color: #ffffff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 20px;

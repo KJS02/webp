@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 
-@app.route("/api/schedule")
+@app.route("/data")
 def get_schedule():
     url = "https://www.scnu.ac.kr/SCNU/sv/schdulView/schdulCalendarView.do?mi=1362"
     response = requests.get(url)

@@ -1,15 +1,22 @@
+from flask import Flask, jsonify
 import requests
 from bs4 import BeautifulSoup
-import json
 
-url = "https://www.scnu.ac.kr/sce/main.do"
-response = requests.get(url)
-soup = BeautifulSoup(response.text, "html.parser")
+app = Flask(__name__)
 
-# 예시 선택자 — 페이지 구조에 따라 변경 필요
-items = soup.select(".calBoard_list li")  # 또는 .info-list li, 실제 구조에 맞게 수정
+@app.route("/api/schedule")
+def get_schedule():
+    url = "https://www.scnu.ac.kr/SCNU/sv/schdulView/schdulCalendarView.do?mi=1362"
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, "html.parser")
 
-schedules = [item.get_text(strip=True) for item in items[:4]]
+    items = soup.select(".tb_notice .subject")  # 구조에 따라 적절히 변경 필요
 
-with open("/var/www/html/date.json", "w", encoding="utf-8") as f:
-    json.dump(schedules, f, ensure_ascii=False)
+    data = []
+    for item in items[:4]:  # 상위 4개 일정만 가져오기
+        data.append(item.get_text(strip=True))
+
+    return jsonify(data)
+
+if __name__ == "__main__":
+    app.run(debug=True)

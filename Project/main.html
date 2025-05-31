@@ -20,8 +20,9 @@
             </div>
 
             <div class="searchbar">
-                <form action="https://www.scnu.ac.kr/search/front/Search.jsp" method="get">
-                    <input type="text" name="query" placeholder="검색어를 입력하세요.">
+                <form action="https://www.google.com/search" method="get" target="_blank">
+                    <input type="text" name="q" placeholder="검색어를 입력하세요.">
+                    <input type="hidden" name="sitesearch" value="scnu.ac.kr">
                     <button type="submit">검색</button>
                 </form>
             </div>
@@ -30,10 +31,11 @@
     <!-- 내비게이션바 -->
         <nav id="navigationbar">
             <ul>
-                <li><a href="#">홈</a></li>
-                <li><a href="#">캘린더</a></li>
-                <li><a href="#">웹 메일</a></li>
-                <li><a href="#">바로가기</a></li>
+                <li><a href="#" data-page="home">홈</a></li>
+                <li><a href="#" data-page="calendar">캘린더</a></li>
+                <li><a href="#" data-page="SCNU-1">학사 공지</a></li>
+                <li><a href="#" data-page="SCNU-2">컴퓨터공학과 공지</a></li>
+                <li><a href="#" data-page="SCNU-3">OCU 컨소시엄 공지</a></li>
             </ul>
         </nav>
 
@@ -46,15 +48,38 @@
 
         <!-- 좌측 -->
         <div class="bg-container" style="flex: 5;">
-            <img id="bgimg" src="" alt="시간대 이미지">
-            <script src="./JS/time.js"></script> <!-- 외부 스크립트 -->
-            <p id="bgtext">불러오는 중...</p>
 
-        
-            <img id="weather-icon" src="" alt="아이콘">
-            <p id="weather">불러오는 중...</p>
+            <!-- 홈 화면 -->
+            <div id="home-view">
+                <img id="bgimg" src="" alt="배경 이미지">
+                <p id="bgtext">불러오는 중...</p>
+                
+                <img id="weather-icon" src="" alt="날씨 아이콘">
+                <p id="weather">불러오는 중...</p>
+            </div>
+
+            <!-- 달력 화면 -->
+            <div id="calendar-view" style="display: none;">
+                <iframe id="iframeview1" src="https://www.scnu.ac.kr/haksa/sv/schdulView/schdulCalendarView.do?mi=1416"></iframe>
+            </div>
+
+            <!-- 학사공지 -->
+            <div id="SCNU-1-view" style="display: none;">
+                <iframe id="iframeview2" src="https://www.scnu.ac.kr/SCNU/na/ntt/selectNttList.do?mi=1132&bbsId=1041"></iframe>
+            </div>
+
+            <!-- 학과공지 -->
+            <div id="SCNU-2-view" style="display: none;">
+                <iframe id="iframeview3" src="https://www.scnu.ac.kr/sce/na/ntt/selectNttList.do?mi=3938&bbsId=2210"></iframe>
+            </div>
+
+            <!-- OCU 공지 -->
+            <div id="SCNU-3-view" style="display: none;">
+                <iframe id="iframeview4" src="https://cons.ocu.ac.kr/bbs/goMenuPage?mcd=MH_211006T171736d88000c"></iframe>
+            </div>
+
         </div>
-    
+
         <!-- 우측 -->
         <aside id="main-aside" style="flex: 2;">
             <h2><a href="https://www.scnu.ac.kr/SCNU/sv/schdulView/schdulCalendarView.do?mi=1362" target="_blank">학사일정</a></h2>
@@ -75,7 +100,6 @@
                     <p id="SCNU4">불러오는 중..</p>
                     <p id="SC4">불러오는 중..</p>
                 </div>
-                <script src="JS/date.js"></script>
             </div>
         </aside>
     </div>
@@ -143,6 +167,8 @@
 
     <!-- 페이지 하단 -->
      Copyright ⓒ Sunchon National University. All rights reserved.
-       
+    <script src="JS/date.js"></script>
+    <script src="JS/SPA.js"></script>
+    <script src="JS/date.js"></script>
 </body>
 </html>

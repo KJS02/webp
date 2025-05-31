@@ -132,16 +132,11 @@ h2, h3 {
   padding: 20px;
 }
 
-.main-container,
 #main-aside {
   background: #FFFFFF;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   padding: 16px;
-}
-
-.bg-container {
-  position: relative;
 }
 
 #bgimg {
@@ -184,9 +179,103 @@ h2, h3 {
   padding: 10px;
 }
 
+#home-view {
+    background-color: #fff;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    position: relative;
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+#calendar-view {
+    background-color: #fff;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    position: relative;
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#SCNU-1-view {
+    background-color: #fff;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    position: relative;
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#SCNU-2-view {
+    background-color: #fff;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    position: relative;
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#SCNU-3-view {
+    background-color: #fff;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    position: relative;
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 
 
+
+
+
+
+
+
+
+
+
+#iframeview1 {
+    pointer-events: none;
+    position: absolute; 
+    top: -305px; 
+    width: 100%;
+    height: 1200px;
+    overflow: hidden;
+}
+
+#iframeview2 {
+    position: absolute; 
+    top: -245px; 
+    width: 100%;
+    height: 1130px;
+    overflow: hidden;
+    transform: scale(1.03); 
+}
+
+#iframeview3 {
+    position: absolute; 
+    top: -603px; 
+    width: 100%;
+    height: 1365px;
+    overflow: hidden;
+    transform: scale(1.06); 
+}
+
+#iframeview4 {
+    position: absolute; 
+    top: -470px; 
+    width: 100%;
+    height: 1700px;
+    overflow: hidden;
+    transform: scale(1.01); 
+}
 
 
 

@@ -34,3 +34,5 @@ document.addEventListener("DOMContentLoaded", () => {
   hideAllViews();
   if (views.home) views.home.style.display = 'block';
 });
+
+

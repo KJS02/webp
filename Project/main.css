@@ -1,97 +1,115 @@
-a:link {color: rgb(0, 0, 0);}
-a:visited {color: rgb(0, 0, 0);}
-a:active {color: rgb(0, 0, 0);}
-label:checked {color: rgb(14, 165, 192);}
-accent-color:checked {color: rgb(14, 165, 192);}
 
+/*-----------전체 적용-------------*/
 
-
-
-h2:hover, h3:hover {transform: scale(1.1); /* 마우스 오버 시 크기 확대 */}
-h2, h3 {transition: transform 0.4s ease; /* 부드러운 전환 설정 */
-    transform-origin: center center;
-    display: inline-block; }
-
-
-
-a {
-  text-decoration: none;
-  color: inherit; 
+a:link, a:visited, a:active {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }
+
+
+h2:hover, h3:hover {
+    transform: scale(1.1);
+}
+
+
+h2, h3 {
+    transition: transform 0.4s ease;
+    transform-origin: center center;
+    display: inline-block;
+}
+
 
 #main-page {
-  max-width: 1200px;
-  margin: 0 auto;
+     max-width: 1200px;
+     margin: 0 auto;
 }
 
-/* 기본 카드 스타일 */
-.main-container, #main-aside {
-    background: #FFFFFF; 
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    padding: 16px;
+
+
+
+
+
+
+
+
+
+/*----------- 헤더 ----------*/
+
+#header {
+    padding: 10px;
 }
 
-/* 버튼 스타일 */
-button {
-    background-color: #2D6AAD;
-    color: white;
-    border: none;
-    padding: 11px 21px;
-    border-radius: 20px;
-    font-size: 14px;
-}
-
-button:hover {
-    background-color: #3700B3;
-}
-
-/* 메인 컨테이너와 사이드바 정렬 */
-#main-content {
+.titlebar {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* 사이드바 스타일 */
-
-.search {
-  margin-top: 25px;
-  margin-right: 20px;    
+.SCNU-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* 검색창 스타일 */
-input[type="text"] {
-    height: 33px;
-    width: 350px;
-    border-radius: 20px;
-    border: 3px solid #2D6AAD;
-    padding-left: 10px;
-}
-
-/* 로고 설정 */
-.logo{
-  width: 55px; 
-  height: 60px;
-  margin-left: 10px;
-  margin-top: 10px;
-  }
-
-#title {
+#titletxt {
+    margin-left: 5px;
     font-size: 30px;
     color: #000;
-    margin-top: 16px;
-    margin-left: 11px;
+    margin: 0 0 0 5px;
 }
 
-#subtitle {
-    font-size: 20px;
-    color: #000;
-    margin-top: 10px;
-    margin-left: 11px;
+.logo-img {
+  width: 55px;
+  height: 60px;
 }
 
-#main-navigation {
-    margin-top: 20px;
+/* 검색창 */
+
+.searchbar form {
+  display: flex;
+  gap: 8px;
+}
+
+.searchbar input[type="text"] {
+  height: 33px;
+  width: 350px;
+  border-radius: 20px;
+  border: 3px solid #2D6AAD;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.searchbar button {
+  background-color: #2D6AAD;
+  color: white;
+  border: none;
+  padding: 11px 21px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.searchbar button:hover {
+  background-color: #3700B3;
+}
+
+
+/* 네비바 */
+
+#navigationbar {
+  margin-top: 20px;
+}
+
+#navigationbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+#navigationbar a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
 }
 
 
@@ -102,77 +120,127 @@ input[type="text"] {
 
 
 
-/* 메인 컨테이너 스타일 */
 
+/*---------- 메인 화면 ----------*/
 
 #main-content {
-    
-    background-color: #f0f0f0;
-    border-radius: 35px;
-    margin-top: 20px;
-    padding: 20px;
-
+  display: flex;
+  gap: 20px;
+  background-color: #f0f0f0;
+  border-radius: 35px;
+  margin-top: 20px;
+  padding: 20px;
 }
 
+.main-container,
+#main-aside {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+}
 
 .bg-container {
-    position: relative;
+  position: relative;
 }
-
 
 #bgimg {
-    display: block;
-    width: 100%;    
-    height: 100%;
-    border-radius: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+#bgtext, #weather {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
 
 #bgtext {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  top: 60%;
+  color: white;
+  font-size: 15px;
 }
 
 #weather {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  top: 50%;
+  color: white;
+  font-size: 20px;
 }
 
-#weather-icon{
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px;
+#weather-icon {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
 }
 
 
 
 
+
+
+
+
+
+
+
+/*----------학사 일정----------*/
 
 #main-aside {
-    border-radius: 20px;
-    padding: 30px;
-    font-size: 15px;
+  border-radius: 20px;
+  padding: 30px;
+  font-size: 15px;
+}
+
+#main-aside h2 {
+  margin-bottom: 40px;
+}
+
+
+.main-a {
+  height: 45px;
+  background-color: #f5f5f5;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-left: -30px;
+  margin-right: 100px;
+  padding: 15px;
+}
+
+.main-a p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.main-b {
+  height: 45px;
+  background-color: #f5f5f5;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-right: -30px;
+  margin-left: 100px;
+  padding: 15px;
+}
+
+.main-b p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 
@@ -181,55 +249,37 @@ input[type="text"] {
 
 
 
-/* 세컨드 컨테이너 스타일 */
+
+
+
+
+/*-----------공지사항----------*/
 
 #sc-container {
+    display: flex; 
+    gap: 20px;
     background-color: #f0f0f0;
     border-radius: 35px;
     margin-top: 20px;
     padding: 20px;
 }
 
-#sc-container1 {
-    transition: transform 0.3s ease; /* 부드럽게 */
+.notibox {
     background-color: #ffffff;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     padding: 30px;
 }
 
-#sc-box{
-    background-color: #ffffff;
+.notibox h3{
+    margin-top: 10px;
+    margin-bottom: 35px;
+
+}
+
+.box {
+    background-color: #f5f5f5;
     box-shadow: 0px 4px 8px rgba(188, 122, 122, 0.2);
     border-radius: 20px;
-    padding: 30px;
-}
-
-
-
-
-/* 학사 일정 스타일 */
-
-#main-a {
-    height: 45px;
-    background-color: #f5f5f5;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    margin-left: -30px;
-    margin-right: 100px;
     padding: 15px;
-}
-
-#main-b {
-    height: 45px;
-    background-color: #f5f5f5;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    margin-right: -30px;
-    margin-left: 100px;
-    padding: 15px;
-}
-
-#box{
-    border-radius: 15px;
 }

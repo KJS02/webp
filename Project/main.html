@@ -6,119 +6,133 @@
     <link rel="stylesheet" type="text/css" href="main.css">
     <title>순천대학교 Hub</title>
 </head>
-    <!-- 전체 틀 -->
-    <div id="main-page">
+<body>
+
+<!-- 전체 틀 -->
+<div id="main-page">
 
     <!-- 헤더 -->
-    <header id="main-header">        
-     
-        <div style="display:inline-block; vertical-align:top;">
-            <img src="media\1.png" alt="title_logo" class="logo"></div>
+    <header id="header">
+        <div class="titlebar">
+            <div class="SCNU-logo">
+                <img src="media/1.png" alt="logo" class="logo-img">
+                <h1 id="titletxt">국립순천대학교</h1>
+            </div>
 
-        <div style="display:inline-block;">
-            <h1 id="title">국립순천대학교</h1></div>
-
-        <div class="search" style="float:right;">
-            <form action="https://www.scnu.ac.kr/search/front/Search.jsp" method="get">
-                <input type="text" name="query" placeholder="검색어를 입력하세요.">
-                <button type="submit">검색</button>
-            </form>
+            <div class="searchbar">
+                <form action="https://www.scnu.ac.kr/search/front/Search.jsp" method="get">
+                    <input type="text" name="query" placeholder="검색어를 입력하세요.">
+                    <button type="submit">검색</button>
+                </form>
+            </div>
         </div>
 
-    <!-- 카테고리 네비게이션 -->
-        <nav id="main-navigation">
-            <ul style="list-style: none; display:flex; gap:10px;">
-            <li><a href="#">홈</a></li>
-            <li><a href="#">캘린더</a></li>
-            <li><a href="#">웹 메일</a></li>
-            <li><a href="#">바로가기</a></li>
+    <!-- 내비게이션바 -->
+        <nav id="navigationbar">
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">캘린더</a></li>
+                <li><a href="#">웹 메일</a></li>
+                <li><a href="#">바로가기</a></li>
             </ul>
-        </nav><hr>
-     </header>
+        </nav>
 
-    <!-- 메인 화면 -->
-<div id="main-content" style="display: flex; justify-content: space-between;">
-
-    <!-- 좌측 섹션 -->
-    <div class="bg-container" style="flex: 5;">
-        <img id="bgimg" src="" alt="시간대 이미지">
-        <script src="./JS/time.js"></script> <!-- 외부 스크립트 -->
-        <p id="bgtext">불러오는 중...</p>
-
-        <!-- 중앙 날씨 -->
-        <img id="weather-icon" src="" alt="아이콘">
-        <p id="weather">불러오는 중...</p>
+    </header>
+    <hr>
 
 
+    <!---------- 메인 컨테이너 ---------->
+    <div id="main-content">
+
+        <!-- 좌측 -->
+        <div class="bg-container" style="flex: 5;">
+            <img id="bgimg" src="" alt="시간대 이미지">
+            <script src="./JS/time.js"></script> <!-- 외부 스크립트 -->
+            <p id="bgtext">불러오는 중...</p>
+
+        
+            <img id="weather-icon" src="" alt="아이콘">
+            <p id="weather">불러오는 중...</p>
+        </div>
+    
+        <!-- 우측 -->
+        <aside id="main-aside" style="flex: 2;">
+            <h2><a href="https://www.scnu.ac.kr/SCNU/sv/schdulView/schdulCalendarView.do?mi=1362" target="_blank">학사일정</a></h2>
+            <div id="SCNU" style="display: flex; flex-direction: column; gap: 20px;">
+                <div class="main-a">
+                    <p id="SCNU1">불러오는 중..</p>
+                    <p id="SC1">불러오는 중..</p>
+                </div>
+                <div class="main-b">
+                    <p id="SCNU2">불러오는 중..</p>
+                    <p id="SC2">불러오는 중..</p>
+                </div>
+                <div class="main-a">
+                    <p id="SCNU3">불러오는 중..</p>
+                    <p id="SC3">불러오는 중..</p>
+                </div>
+                <div class="main-b">
+                    <p id="SCNU4">불러오는 중..</p>
+                    <p id="SC4">불러오는 중..</p>
+                </div>
+                <script src="JS/date.js"></script>
+            </div>
+        </aside>
     </div>
 
-    <!-- 우측 섹션 -->
-    <aside id="main-aside" style="flex: 2;">
-        <a href="https://www.scnu.ac.kr/SCNU/sv/schdulView/schdulCalendarView.do?mi=1362" target="_blank"><h2>학사일정</h2><br>
-        <div style="display: flex; flex-direction: column; gap: 20px;">
-            <div id="main-a">
-                <a href="#" id="SCNU1">불러오는 중..</a>
-            </div>
-            <div id="main-b">
-                <a href="#" id="SCNU2">불러오는 중..</a>
-            </div>
-            <div id="main-a">
-                <a href="#" id="SCNU3">불러오는 중..</a>
-            </div>
-            <div id="main-b">
-                <a href="#" id="SCNU4">불러오는 중..</a>
-            </div>
-            <script src="JS/date.js"></script>
-        </div>
-    </aside>
-</div>
 
-    <!-- 하단 공지 컨테이너 -->
-    <div id="sc-container"  style="display: flex; gap: 20px;">
-        <div id="sc-container1" style="flex: 1;">
-            <a href="https://www.scnu.ac.kr/SCNU/na/ntt/selectNttList.do?mi=1132&bbsId=1041" target="_blank"><h3>ㆍ 학사 공지</h3>
-                <div style="display: flex; flex-direction: column; gap: 20px;">
-                <div id="box" style="background: #f5f5f5; padding: 15px;">
+    <!---------- 공지사항 컨테이너 ---------->
+    <div id="sc-container">
+
+        <!-- 학사 공지 -->
+        <div class="notibox" style="flex: 1;">
+            <h3 class="notice-title">
+                <a href="https://www.scnu.ac.kr/SCNU/na/ntt/selectNttList.do?mi=1132&bbsId=1041" target="_blank">ㆍ 학사 공지</a>
+            </h3>
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div class="box">
                     <a href="#">1</a>
                 </div>
-                <div id="box" style="background: #f5f5f5; padding: 15px;">
+                <div class="box">
                     <a href="#">2</a>
                 </div>
-                <div id="box" style="background: #f5f5f5; padding: 15px;">
-                    <a href="#">3</a>
-                </div>
-            </div>
-        </div>
-        
-    </ul>
-
-        <div id="sc-container1" style="flex: 1;">
-            <a href="https://www.scnu.ac.kr/sce/na/ntt/selectNttList.do?mi=3938&bbsId=2210" target="_blank"><h3>ㆍ 학과 공지</h3>
-                <div style="display: flex; flex-direction: column; gap: 20px;">
-                <div id="box" style="background: #f5f5f5; padding: 15px;">
-                    <a href="#">1</a>
-                </div>
-                <div id="box" style="background: #f5f5f5; padding: 15px;">
-                    <a href="#">2</a>
-                </div>
-                <div id="box" style="background: #f5f5f5; padding: 15px;">
+                <div class="box">
                     <a href="#">3</a>
                 </div>
             </div>
         </div>
 
-
-
-        <div id="sc-container1" style="flex: 1;">
-            <a href="https://cons.ocu.ac.kr/bbs/bbsHome/Form/atclListForm?bbsId=BBS_211001T1440119a30002" target="_blank"><h3>ㆍ OCU 공지</h3>
-                <div style="display: flex; flex-direction: column; gap: 20px;">
-                <div id="box" style="background: #f5f5f5; padding: 15px;">
+        <!-- 학과 공지 -->
+        <div class="notibox" style="flex: 1;">
+            <h3 class="notice-title">
+                <a href="https://www.scnu.ac.kr/sce/na/ntt/selectNttList.do?mi=3938&bbsId=2210" target="_blank">ㆍ 학과 공지</a>
+            </h3>
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div class="box">
                     <a href="#">1</a>
                 </div>
-                <div id="box" style="background: #f5f5f5; padding: 15px;">
+                <div class="box">
                     <a href="#">2</a>
                 </div>
-                <div id="box" style="background: #f5f5f5; padding: 15px;">
+                <div class="box">
+                    <a href="#">3</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- OCU 공지 -->
+        <div class="notibox" style="flex: 1;">
+            <h3 class="notice-title">
+                <a href="https://cons.ocu.ac.kr/bbs/bbsHome/Form/atclListForm?bbsId=BBS_211001T1440119a30002" target="_blank">ㆍ OCU 공지</a>
+            </h3>
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div class="box">
+                    <a href="#">1</a>
+                </div>
+                <div class="box">
+                    <a href="#">2</a>
+                </div>
+                <div class="box">
                     <a href="#">3</a>
                 </div>
             </div>
